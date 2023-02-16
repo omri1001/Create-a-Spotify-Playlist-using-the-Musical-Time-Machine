@@ -4,11 +4,11 @@ import spotipy
 import spotipy.util as util
 from spotipy.oauth2 import SpotifyOAuth
 
-username = "317ml6rwafvezerzgxs4jsamfl2i"
+username = "PUTYOURS"
 scope = "playlist-modify-public"
-client_id = "9da2bb5a5f88476a91f7e29c8134dc45"
-client_secret = "bb51b4a2628546678f2d0c931d9c9e21"
-redirect_uri = "http://mysite.com/callback/"
+client_id = "PUTYOURS"
+client_secret = "PUTYOURS"
+redirect_uri = "PUTYOURS"
 # Assignment 1
 # ask the user what year we are going to scrape from
 year_requested = input("What year do you want to travel to? Type the date in this format YYYY-MM-DD:")
@@ -63,33 +63,3 @@ for song in top100:
     sp.user_playlist_add_tracks(username, playlist_id, [song_uri])
 
     print(f"Song added to playlist: {playlist_id}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#import requests
-#from bs4 import BeautifulSoup
-##date = input("please enter a date  in this format YYYY-MM-DD:")
-#date = "2022-08-12"
-#response = requests.get(f"https://www.billboard.com/charts/hot-100/{date}/")
-#top_song_url= response.text
-#soup = BeautifulSoup(top_song_url, "html.parser")
-##print(soup.prettify())
-#table_results = soup.find(class_= 'chart-results // lrv-a-wrapper lrv-u-padding-lr-00@mobile-max')
-#songs_tags = table_results.find_all(id='title-of-a-story', name='h3', class_="c-title a-no-trucate a-font-primary-bold-s u-letter-spacing-0021 lrv-u-font-size-18@tablet lrv-u-font-size-16 u-line-height-125 u-line-height-normal@mobile-max a-truncate-ellipsis u-max-width-330 u-max-width-230@tablet-only")
-#songs_list = []
-##print(songs_tags)
-#for song in songs_tags:
-#    clear_text = song.text.replace('\n', '').replace('\t', '')
-#    songs_list.append(clear_text)
-#print(songs_list)
